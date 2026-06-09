@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EKC International FZE — 6-Month Sales & Marketing Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --bg:#0B0C10;
+  --surface:#13151E;
+  --card:#1A1D2A;
+  --card-hover:#1F2235;
+  --border:rgba(255,255,255,0.07);
+  --border-hi:rgba(255,255,255,0.14);
+  --amber:#F59E0B;
+  --amber-lt:#FCD34D;
+  --amber-dim:rgba(245,158,11,0.12);
+  --teal:#10B981;
+  --teal-dim:rgba(16,185,129,0.12);
+  --blue:#3B82F6;
+  --blue-dim:rgba(59,130,246,0.12);
+  --purple:#8B5CF6;
+  --purple-dim:rgba(139,92,246,0.12);
+  --coral:#F97316;
+  --tp:#F1F5F9;
+  --ts:#94A3B8;
+  --tt:#475569;
+  --fd:'Barlow Condensed',sans-serif;
+  --fb:'Barlow',sans-serif;
+  --r8:8px;--r10:10px;--r12:12px;
+}
+body{background:var(--bg);color:var(--tp);font-family:var(--fb);font-size:14px;line-height:1.6;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(245,158,11,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,0.025) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0;}
+.wrap{max-width:1080px;margin:0 auto;padding:2rem 1.5rem;position:relative;z-index:1;}
+
+/* HEADER */
+.hdr{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:1px solid var(--border);}
+.hdr-eyebrow{font-family:var(--fd);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:6px;}
+.hdr-title{font-family:var(--fd);font-size:38px;font-weight:800;line-height:1.05;color:var(--tp);margin-bottom:6px;}
+.hdr-sub{font-size:13px;color:var(--ts);}
+.hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;margin-top:6px;}
+.badges{display:flex;gap:6px;flex-wrap:wrap;}
+.badge{font-family:var(--fd);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:4px;}
+.b-am{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(245,158,11,.3);}
+.b-tl{background:var(--teal-dim);color:var(--teal);border:1px solid rgba(16,185,129,.3);}
+.b-bl{background:var(--blue-dim);color:var(--blue);border:1px solid rgba(59,130,246,.3);}
+.b-pu{background:var(--purple-dim);color:var(--purple);border:1px solid rgba(139,92,246,.3);}
+.b-sm{font-size:10px;padding:2px 8px;}
+
+/* NAV */
+.nav{display:flex;gap:4px;margin-bottom:1.5rem;background:var(--surface);padding:4px;border-radius:12px;border:1px solid var(--border);flex-wrap:wrap;}
+.nav-btn{flex:1;min-width:100px;padding:10px 14px;border:none;background:transparent;color:var(--ts);font-family:var(--fd);font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;border-radius:9px;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px;}
+.nav-btn svg{width:15px;height:15px;flex-shrink:0;}
+.nav-btn:hover{color:var(--tp);background:rgba(255,255,255,.06);}
+.nav-btn.on{background:var(--amber);color:#000;}
+
+/* SECTIONS */
+.sec{display:none;animation:fi .3s ease;}
+.sec.on{display:block;}
+@keyframes fi{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* SECTION LABEL */
+.slbl{font-family:var(--fd);font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--amber);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.slbl::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(245,158,11,.3),transparent);}
+
+/* METRIC GRID */
+.mg{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:1.5rem;}
+.mc{background:var(--card);border:1px solid var(--border);border-radius:var(--r12);padding:1.25rem;position:relative;overflow:hidden;transition:border-color .2s;}
+.mc::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--amber);}
+.mc:hover{border-color:var(--border-hi);}
+.mc-lbl{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--tt);font-family:var(--fd);font-weight:600;margin-bottom:6px;}
+.mc-val{font-family:var(--fd);font-size:36px;font-weight:800;color:var(--tp);line-height:1;margin-bottom:4px;}
+.mc-sub{font-size:12px;color:var(--ts);}
+
+/* PHASE GRID */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:1.5rem;}
+.pc{background:var(--card);border:1px solid var(--border);border-radius:var(--r12);padding:1.25rem;position:relative;overflow:hidden;transition:border-color .2s;}
+.pc:hover{border-color:var(--border-hi);}
+.pc-num{font-family:var(--fd);font-size:52px;font-weight:800;line-height:1;opacity:.05;position:absolute;right:10px;top:6px;color:var(--tp);}
+.pi{display:flex;align-items:center;gap:6px;margin-bottom:8px;}
+.pdot{width:8px;height:8px;border-radius:50%;}
+.pr{font-family:var(--fd);font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--ts);text-transform:uppercase;}
+.pt{font-family:var(--fd);font-size:20px;font-weight:700;color:var(--tp);margin-bottom:6px;}
+.pd{font-size:12px;color:var(--ts);line-height:1.55;}
+
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;}
+.tbl thead tr{border-bottom:1px solid var(--border);}
+.tbl th{padding:8px 12px;text-align:left;font-family:var(--fd);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tt);}
+.tbl tbody tr{border-bottom:1px solid var(--border);transition:background .15s;}
+.tbl tbody tr:last-child{border:none;}
+.tbl tbody tr:hover{background:rgba(245,158,11,.03);}
+.tbl td{padding:12px;font-size:13px;color:var(--ts);vertical-align:middle;}
+.tbl td:first-child{color:var(--tp);}
+
+/* CARD */
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r12);padding:1.25rem 1.5rem;margin-bottom:1rem;transition:border-color .2s;}
+.card:hover{border-color:var(--border-hi);}
+
+/* TIP */
+.tip{background:var(--amber-dim);border:1px solid rgba(245,158,11,.2);border-radius:var(--r10);padding:12px 16px;font-size:13px;color:#FCD34D;display:flex;gap:10px;align-items:flex-start;margin-top:1rem;}
+.tip-ic{font-size:18px;flex-shrink:0;margin-top:1px;}
+.tip strong{color:var(--amber-lt);}
+
+/* TIMELINE */
+.tl-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:1.25rem;}
+.tlm{background:var(--card);border:1px solid var(--border);border-radius:var(--r10);padding:12px 8px;cursor:pointer;transition:all .2s;text-align:center;position:relative;overflow:hidden;}
+.tlm::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--amber);transform:scaleX(0);transition:transform .2s;}
+.tlm:hover,.tlm.on{border-color:rgba(245,158,11,.4);background:var(--card-hover);}
+.tlm:hover::after,.tlm.on::after{transform:scaleX(1);}
+.tmn{font-size:10px;color:var(--tt);font-family:var(--fd);font-weight:600;text-transform:uppercase;letter-spacing:.08em;}
+.tml{font-family:var(--fd);font-size:15px;font-weight:700;color:var(--tp);margin:2px 0;}
+.tmp{font-size:10px;padding:2px 6px;border-radius:3px;display:inline-block;}
+.p-fo{background:rgba(245,158,11,.15);color:#FCD34D;}
+.p-ou{background:rgba(16,185,129,.15);color:#10B981;}
+.p-co{background:rgba(59,130,246,.15);color:#3B82F6;}
+
+/* MONTH DETAIL */
+.md{display:none;}
+.md.on{display:block;animation:fi .25s ease;}
+.mh{margin-bottom:1rem;}
+.mh h3{font-family:var(--fd);font-size:22px;font-weight:700;color:var(--tp);margin-bottom:4px;}
+.mh p{font-size:13px;color:var(--ts);}
+
+/* TASK */
+.ti{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:opacity .15s;user-select:none;}
+.ti:last-child{border:none;padding-bottom:0;}
+.ti:hover{opacity:.9;}
+.ti.done .tt1{text-decoration:line-through;opacity:.45;}
+.ti-cb{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--border-hi);flex-shrink:0;margin-top:3px;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:11px;font-weight:700;color:#000;}
+.ti-cb.chk{background:var(--amber);border-color:var(--amber);}
+.ti-ic{width:32px;height:32px;border-radius:8px;background:var(--amber-dim);border:1px solid rgba(245,158,11,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;}
+.tt1{font-size:13px;font-weight:500;color:var(--tp);margin-bottom:3px;}
+.tt2{font-size:12px;color:var(--ts);line-height:1.5;}
+
+/* PROGRESS OVERALL */
+.po{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r8);padding:12px 16px;margin-bottom:1.25rem;}
+.po-lbl{font-size:13px;color:var(--ts);white-space:nowrap;}
+.po-bar{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden;}
+.po-fill{height:100%;background:var(--amber);border-radius:4px;width:0%;transition:width .4s;}
+.po-cnt{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--amber);white-space:nowrap;}
+
+/* CHANNELS */
+.ch{display:grid;grid-template-columns:42px 1fr 130px;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--border);}
+.ch:last-child{border:none;}
+.ch-ic{width:42px;height:42px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.ch-n{font-size:14px;font-weight:500;color:var(--tp);margin-bottom:3px;}
+.ch-d{font-size:12px;color:var(--ts);line-height:1.5;margin-bottom:6px;}
+.iw{text-align:right;}
+.ilbl{font-size:10px;color:var(--tt);font-family:var(--fd);font-weight:600;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+.ibg{height:6px;background:var(--surface);border-radius:3px;overflow:hidden;margin-bottom:4px;}
+.ifl{height:100%;border-radius:3px;background:linear-gradient(to right,var(--amber),var(--amber-lt));transition:width 1s ease;}
+.itx{font-size:11px;color:var(--amber);font-weight:500;}
+
+/* MARKETS */
+.mst{display:flex;align-items:center;gap:10px;margin-bottom:10px;margin-top:1.5rem;}
+.mst:first-of-type{margin-top:0;}
+.mkt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:10px;margin-bottom:.5rem;}
+.mkt{background:var(--card);border:1px solid var(--border);border-radius:var(--r12);padding:1rem 1.1rem;transition:all .2s;}
+.mkt:hover{border-color:var(--border-hi);transform:translateY(-2px);}
+.mkt-fl{font-size:24px;margin-bottom:6px;}
+.mkt-nm{font-family:var(--fd);font-size:17px;font-weight:700;color:var(--tp);margin-bottom:4px;}
+.mkt-ds{font-size:12px;color:var(--ts);line-height:1.5;margin-bottom:8px;}
+
+/* KPI */
+.kg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.25rem;}
+.kc{background:var(--card);border:1px solid var(--border);border-radius:var(--r12);padding:1rem;text-align:center;transition:border-color .2s;}
+.kc:hover{border-color:var(--border-hi);}
+.kn{font-family:var(--fd);font-size:30px;font-weight:800;color:var(--tp);margin-bottom:4px;}
+.kl{font-size:12px;color:var(--ts);}
+
+/* PROGRESS */
+.pri{margin-bottom:16px;}
+.prh{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
+.prl{font-size:13px;color:var(--ts);}
+.prt{font-family:var(--fd);font-size:13px;font-weight:600;color:var(--tp);}
+.pbg{height:8px;background:var(--surface);border-radius:4px;overflow:hidden;}
+.pfl{height:100%;border-radius:4px;transition:width 1.2s ease;}
+
+/* RHYTHM */
+.rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:10px;}
+.rc{background:var(--card);border:1px solid var(--border);border-radius:var(--r12);padding:1rem;transition:border-color .2s;}
+.rc:hover{border-color:var(--border-hi);}
+.rd{font-family:var(--fd);font-size:13px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
+.rt{font-size:13px;font-weight:500;color:var(--tp);margin-bottom:4px;}
+.rds{font-size:12px;color:var(--ts);}
+
+/* FOOTER */
+.foot{margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.foot-t{font-size:12px;color:var(--tt);}
+.print-btn{background:var(--surface);border:1px solid var(--border);color:var(--ts);padding:9px 18px;border-radius:8px;cursor:pointer;font-family:var(--fd);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;transition:all .2s;display:flex;align-items:center;gap:7px;}
+.print-btn:hover{border-color:var(--border-hi);color:var(--tp);}
+.print-btn svg{width:14px;height:14px;}
+
+/* RESPONSIVE */
+@media(max-width:800px){
+  .pg{grid-template-columns:1fr;}
+  .tl-grid{grid-template-columns:repeat(3,1fr);}
+  .ch{grid-template-columns:42px 1fr;}
+  .iw{display:none;}
+  .hdr-title{font-size:28px;}
+  .kg{grid-template-columns:repeat(2,1fr);}
+}
+@media print{
+  body{background:#fff;color:#000;}
+  body::before{display:none;}
+  .nav,.print-btn{display:none;}
+  .sec{display:block!important;margin-bottom:2rem;page-break-inside:avoid;}
+  .card,.mc,.pc,.mkt,.kc,.rc,.tlm{background:#f5f5f5;border:1px solid #ddd;}
+  *{color:#111!important;}
+  .hdr-eyebrow,.slbl,.amber,.rd,.itx{color:#b7760a!important;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div>
+    <p class="hdr-eyebrow">EKC International FZE &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; High-Pressure Cylinders</p>
+    <h1 class="hdr-title">6-Month Sales &amp;<br>Lead Generation Plan</h1>
+    <p class="hdr-sub">CNG · Industrial Cylinders · MEGC &nbsp;—&nbsp; Global Export Strategy &nbsp;|&nbsp; July – December 2025</p>
+  </div>
+  <div class="hdr-right">
+    <div class="badges">
+      <span class="badge b-am">CNG Cylinders</span>
+      <span class="badge b-tl">Industrial</span>
+      <span class="badge b-bl">MEGC</span>
+    </div>
+    <span style="font-size:12px;color:var(--tt);">Prepared for: Sales &amp; Marketing Team</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button class="nav-btn on" onclick="sw('overview')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+    Overview
+  </button>
+  <button class="nav-btn" onclick="sw('roadmap')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Roadmap
+  </button>
+  <button class="nav-btn" onclick="sw('channels')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81"/><path d="M1 1l22 22"/></svg>
+    Channels
+  </button>
+  <button class="nav-btn" onclick="sw('markets')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+    Markets
+  </button>
+  <button class="nav-btn" onclick="sw('kpis')">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+    KPIs
+  </button>
+</div>
+
+<!-- ===================== OVERVIEW ===================== -->
+<div class="sec on" id="tab-overview">
+  <div class="mg">
+    <div class="mc"><p class="mc-lbl">Target New Leads</p><p class="mc-val" data-count="300">0</p><p class="mc-sub">Qualified prospects over 6 months</p></div>
+    <div class="mc"><p class="mc-lbl">Priority Markets</p><p class="mc-val" data-count="12">0</p><p class="mc-sub">Countries to target actively</p></div>
+    <div class="mc"><p class="mc-lbl">Revenue Pipeline</p><p class="mc-val">$2M+</p><p class="mc-sub">Pipeline value to generate</p></div>
+    <div class="mc"><p class="mc-lbl">Trade Events</p><p class="mc-val" data-count="6">0</p><p class="mc-sub">Key exhibitions to attend</p></div>
+  </div>
+
+  <p class="slbl">Strategic Phases</p>
+  <div class="pg">
+    <div class="pc">
+      <div class="pc-num">1</div>
+      <div class="pi"><div class="pdot" style="background:var(--amber)"></div><span class="pr">Month 1–2</span></div>
+      <p class="pt">Foundation</p>
+      <p class="pd">CRM setup, database building, digital presence overhaul, product collateral, competitor research. Build the engine before you drive it.</p>
+    </div>
+    <div class="pc">
+      <div class="pc-num">2</div>
+      <div class="pi"><div class="pdot" style="background:var(--teal)"></div><span class="pr">Month 3–4</span></div>
+      <p class="pt">Active Outreach</p>
+      <p class="pd">Multi-channel campaigns, trade shows, agent and distributor network activation, government tender portal registrations.</p>
+    </div>
+    <div class="pc">
+      <div class="pc-num">3</div>
+      <div class="pi"><div class="pdot" style="background:var(--blue)"></div><span class="pr">Month 5–6</span></div>
+      <p class="pt">Nurture &amp; Convert</p>
+      <p class="pd">Pipeline follow-ups, custom proposals, factory visits, distributor deal closings, and referral program launch.</p>
+    </div>
+  </div>
+
+  <p class="slbl">Product–Market Priority Matrix</p>
+  <div class="card" style="padding:.5rem 0;">
+    <table class="tbl">
+      <thead><tr>
+        <th>Product</th><th>Primary Markets</th><th>Target Buyers</th><th>Priority</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="badge b-am">CNG Cylinders</span></td>
+          <td>India, Bangladesh, Pakistan, Argentina, Brazil, Colombia</td>
+          <td>Fleet operators, CNG station developers, transport ministries</td>
+          <td><span style="color:#22C55E;font-weight:600;">★★★ High</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge b-tl">Industrial</span></td>
+          <td>Nigeria, Kenya, South Africa, GCC, Southeast Asia</td>
+          <td>Chemical plants, hospitals, welding distributors, oil &amp; gas</td>
+          <td><span style="color:var(--amber);font-weight:600;">★★☆ Medium</span></td>
+        </tr>
+        <tr>
+          <td><span class="badge b-bl">MEGC</span></td>
+          <td>Germany, USA, Netherlands, Australia, GCC</td>
+          <td>Gas distributors (BOC/Linde), offshore operators, energy companies</td>
+          <td><span style="color:#22C55E;font-weight:600;">★★★ High</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip">
+    <span class="tip-ic">💡</span>
+    <div><strong>Key Competitive Advantage:</strong> Dubai base means zero customs friction for GCC, superior logistics to Africa &amp; South Asia, and strong trade finance access. Leverage "Made in UAE" credibility — many buyers prefer non-Chinese supply chains for quality-critical pressure equipment. Use this in every pitch.</div>
+  </div>
+</div>
+
+<!-- ===================== ROADMAP ===================== -->
+<div class="sec" id="tab-roadmap">
+  <p class="slbl">Click a month to see the full action plan</p>
+
+  <div class="po">
+    <span class="po-lbl">Task completion</span>
+    <div class="po-bar"><div class="po-fill" id="pofill"></div></div>
+    <span class="po-cnt" id="pocnt">0 / 30</span>
+  </div>
+
+  <div class="tl-grid">
+    <div class="tlm on" onclick="selM(0,this)"><div class="tmn">Month 1</div><div class="tml">Jul 2025</div><span class="tmp p-fo">Foundation</span></div>
+    <div class="tlm" onclick="selM(1,this)"><div class="tmn">Month 2</div><div class="tml">Aug 2025</div><span class="tmp p-fo">Foundation</span></div>
+    <div class="tlm" onclick="selM(2,this)"><div class="tmn">Month 3</div><div class="tml">Sep 2025</div><span class="tmp p-ou">Outreach</span></div>
+    <div class="tlm" onclick="selM(3,this)"><div class="tmn">Month 4</div><div class="tml">Oct 2025</div><span class="tmp p-ou">Outreach</span></div>
+    <div class="tlm" onclick="selM(4,this)"><div class="tmn">Month 5</div><div class="tml">Nov 2025</div><span class="tmp p-co">Convert</span></div>
+    <div class="tlm" onclick="selM(5,this)"><div class="tmn">Month 6</div><div class="tml">Dec 2025</div><span class="tmp p-co">Convert</span></div>
+  </div>
+
+  <!-- M1 -->
+  <div class="md on card" id="m0">
+    <div class="mh"><h3>Month 1 — Build Your Foundation</h3><p>Set up all systems before outreach begins. This phase determines the quality of everything that follows.</p></div>
+    <div class="task-list">
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🗄️</div><div><p class="tt1">CRM Setup &amp; Contact Database</p><p class="tt2">Deploy HubSpot Free or Zoho CRM. Import all existing customers. Create buyer persona lists segmented by product (CNG / Industrial / MEGC). Set up deal pipeline stages: Lead → Qualified → RFQ → Proposal → Order.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">💼</div><div><p class="tt1">LinkedIn Company Page Overhaul</p><p class="tt2">Rewrite EKC company page with a keyword-rich description, custom banner showcasing all 3 products, and a Services section. Also optimize your personal LinkedIn profile for sales outreach — this is your primary prospecting tool.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📄</div><div><p class="tt1">Product Collateral Creation</p><p class="tt2">Design professional PDF datasheets for CNG, Industrial, and MEGC products using Canva Pro. Include technical specs, cylinder sizes, testing standards, certification logos, and a clear "Why EKC?" section. One page per product type.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🔍</div><div><p class="tt1">Competitor &amp; Market Research</p><p class="tt2">Map top 10 global competitors — Luxfer Gas Cylinders, Worthington Industries, CP Industries, Everest Kanto (EKC India), Faber Industries. Identify pricing gaps, lead times, and weaknesses you can exploit in your pitch.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🏅</div><div><p class="tt1">Certifications Audit &amp; Showcase</p><p class="tt2">Compile a complete list of all certifications held: ISO 11439, DOT, CE, TPED, BIS, etc. Add certification badge logos to ALL marketing material, website, and emails. Buyers evaluate compliance before price in industrial equipment.</p></div></div>
+    </div>
+  </div>
+  <!-- M2 -->
+  <div class="md card" id="m1">
+    <div class="mh"><h3>Month 2 — Digital Presence &amp; Directory Listings</h3><p>Get discovered by buyers actively searching online. Build inbound lead flow before paid outreach begins.</p></div>
+    <div class="task-list">
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🛒</div><div><p class="tt1">B2B Marketplace Listings</p><p class="tt2">Create verified supplier accounts on Alibaba (Gold Supplier), TradeIndia, ExportHub, Made-in-China, and IndiaMart. Upload full product catalogs with specs, certifications, MOQ, and shipping terms. Optimize titles for search keywords.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📚</div><div><p class="tt1">Industry Directory Registrations</p><p class="tt2">Register on Kompass.com, Thomasnet.com, NGVA Europe member directory, and CGA (Compressed Gas Association) resources. These directories are where professional procurement teams search — often ignored by competitors.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📧</div><div><p class="tt1">Cold Email Infrastructure</p><p class="tt2">Set up Brevo or Mailchimp free account. Create a 5-email cold outreach sequence with 3-day intervals. Write separate templates for CNG fleet operators, industrial gas buyers, and MEGC distributors. Keep every email under 250 words.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🌐</div><div><p class="tt1">Website SEO Audit &amp; Optimization</p><p class="tt2">Target keywords: "CNG cylinder manufacturer UAE", "industrial cylinder exporter Dubai", "MEGC supplier Middle East". Optimize all product pages — title tags, meta descriptions, H1 headings, and image alt text. Check page load speed.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🎪</div><div><p class="tt1">Trade Show Calendar &amp; Early Registration</p><p class="tt2">Confirm attendance at ADIPEC (Abu Dhabi, Nov), Gastech, CNG/LNG Americas, Africa Oil Week, and Hannover Messe. Book exhibition space now — early booking is significantly cheaper and secures better floor positions.</p></div></div>
+    </div>
+  </div>
+  <!-- M3 -->
+  <div class="md card" id="m2">
+    <div class="mh"><h3>Month 3 — Launch Multi-Channel Outreach</h3><p>Start active lead generation simultaneously across all channels. Volume and consistency are everything this month.</p></div>
+    <div class="task-list">
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🎯</div><div><p class="tt1">LinkedIn Sales Navigator Campaign</p><p class="tt2">Subscribe to LinkedIn Sales Navigator ($99/mo). Build lists of Procurement Managers, Fleet Directors, and Plant Managers in target markets. Send 30–50 personalized connection requests per day. First message must offer value — never pitch immediately.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">✉️</div><div><p class="tt1">Cold Email Campaign — 500 Contacts</p><p class="tt2">Use Apollo.io or Hunter.io to find verified contacts at CNG fleet operators in India, Bangladesh, Pakistan, and Latin America. Launch your 5-email sequence. Target: 25%+ open rate, 5%+ reply rate. Segment by country for personalization.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🤝</div><div><p class="tt1">Agent &amp; Distributor Identification</p><p class="tt2">Identify 2–3 potential agents/distributors per priority country: India, Nigeria, Brazil, and Pakistan. Use UAE Chamber of Commerce, Dubai Exports network, and LinkedIn to find candidates. Prepare a standard Agent Agreement template.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📋</div><div><p class="tt1">Government &amp; Tender Portal Registrations</p><p class="tt2">Register your company on UNGM (UN Global Marketplace), DG Market (EU), World Bank e-Procurement portal, and key national government procurement portals in target countries. Set up tender alerts for relevant product categories.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">✍️</div><div><p class="tt1">LinkedIn Authority Content</p><p class="tt2">Publish 2 technical articles: "How to select the right CNG cylinder for fleet conversions" and "MEGC vs. tube trailers: a true cost comparison". These establish EKC as a technical authority and generate inbound interest passively.</p></div></div>
+    </div>
+  </div>
+  <!-- M4 -->
+  <div class="md card" id="m3">
+    <div class="mh"><h3>Month 4 — Trade Shows &amp; Partnership Deals</h3><p>Maximize face-to-face engagement and formalize your agent network with signed agreements.</p></div>
+    <div class="task-list">
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🏛️</div><div><p class="tt1">ADIPEC / Key Trade Show Execution</p><p class="tt2">Pre-book 20+ meetings via LinkedIn before the event. Man the booth with product brochures, cylinder samples, and certification documents. Collect 100+ business cards. Follow up by email within 24 hours — speed signals professionalism.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📝</div><div><p class="tt1">Sign First Agent Agreements</p><p class="tt2">Finalize and sign distribution agreements with 2–3 agents in India, Nigeria, and Brazil. Set clear quarterly volume targets, commission rates (typically 3–7% for industrial equipment), exclusivity terms, and reporting cadence.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🏛️</div><div><p class="tt1">Dubai Exports Registration &amp; Missions</p><p class="tt2">Register with UAE Export Authority (dubaiexports.ae) for market missions, subsidized trade show participation, and direct buyer-seller matchmaking events. This is free government support paid for by your business license — most UAE companies never use it.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📞</div><div><p class="tt1">Warm Lead Follow-up Campaign</p><p class="tt2">Call and email all Month 3 leads. Qualify into Hot (RFQ in 30 days), Warm (3–6 months), Cold (6+ months). Send detailed quotation to Hot leads within 48 hours. Schedule Dubai factory visits for top-priority prospects.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">💬</div><div><p class="tt1">WhatsApp Business Broadcast Setup</p><p class="tt2">Create a WhatsApp Business profile for EKC. Build broadcast lists for India, Middle East, and Africa contacts. Share product specs, price list updates, and RFQ links. Response rates in these markets are 3–5x higher than email.</p></div></div>
+    </div>
+  </div>
+  <!-- M5 -->
+  <div class="md card" id="m4">
+    <div class="mh"><h3>Month 5 — Pipeline Nurturing &amp; Proposals</h3><p>Move hot leads through to quotation and order stage. This is where deals are won or permanently lost.</p></div>
+    <div class="task-list">
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📊</div><div><p class="tt1">Custom Proposal Template Creation</p><p class="tt2">Build professional quotation templates for each product line. Include: pricing tiers, Incoterms (FOB/CIF Dubai), delivery timelines, quality certificate copies, payment terms (LC, TT, 30% advance), and warranty conditions.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">✈️</div><div><p class="tt1">Factory Visit Invitations</p><p class="tt2">Invite your top 5–10 highest-value prospects for a Dubai facility tour. This converts hesitant buyers at a very high rate — seeing the operation, QC processes, and certifications firsthand removes objections that emails cannot address.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">⭐</div><div><p class="tt1">Customer Testimonials &amp; Case Studies</p><p class="tt2">Request written testimonials from 3–5 existing satisfied customers. Write a one-page case study for each product type showing: customer's challenge, EKC's solution, cylinders supplied, and measurable outcome. These are powerful in proposals.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🔄</div><div><p class="tt1">Cold Lead Re-engagement Campaign</p><p class="tt2">Email all leads marked Cold with a fresh angle: new certification achieved, product upgrade, competitive pricing update, or a relevant case study. A different context at a different moment can flip cold to warm.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📈</div><div><p class="tt1">Mid-Point Performance Review</p><p class="tt2">Analyze all channel data: LinkedIn response rates, email open/reply rates, trade show ROI, marketplace inquiries. Double down on the top 2 performing channels. Pause the weakest 2. Reallocate budget and effort before Month 6.</p></div></div>
+    </div>
+  </div>
+  <!-- M6 -->
+  <div class="md card" id="m5">
+    <div class="mh"><h3>Month 6 — Scale &amp; Close</h3><p>Maximize conversions, close first orders, and set up the foundation for Year 2 exponential growth.</p></div>
+    <div class="task-list">
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🏆</div><div><p class="tt1">Close First Pilot Orders</p><p class="tt2">Negotiate and close initial orders from your top 5 prospects — even small pilot orders of 50–100 cylinders. Offer slightly preferential pilot terms. The first order establishes a supplier relationship that grows year over year.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🔗</div><div><p class="tt1">Referral Program Launch</p><p class="tt2">Contact existing customers and offer a referral incentive: 2% volume discount on their next order for each new customer they introduce. Industrial supply networks are tight — a warm introduction converts at 5–10x the rate of cold outreach.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📑</div><div><p class="tt1">Tender Bid Submissions</p><p class="tt2">Submit formal bids for all open government and UN tenders identified in Month 3. Even losing bids build your submission track record, refine your documentation, and prequalify EKC for future tenders in the same portals.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">🗺️</div><div><p class="tt1">Year 2 Expansion Plan</p><p class="tt2">Based on 6-month data, choose 3 new markets to enter in Year 2. Plan exhibition schedule, assign agent targets per market, set annual pipeline goal, and define the 2 new product verticals (e.g., hydrogen cylinders, fire suppression) to develop.</p></div></div>
+      <div class="ti" onclick="togT(this)"><div class="ti-cb"></div><div class="ti-ic">📱</div><div><p class="tt1">LinkedIn Paid Retargeting Ads</p><p class="tt2">Launch targeted LinkedIn ads to your website visitor audiences and profile viewers. Budget: $300–500/month. Target: Procurement and Operations decision-makers in your top 5 countries. In a 6–18 month sales cycle, staying visible is critical.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CHANNELS ===================== -->
+<div class="sec" id="tab-channels">
+  <p class="slbl">Ranked by impact for cylinder exports</p>
+  <div class="card">
+    <div class="ch">
+      <div class="ch-ic">💼</div>
+      <div>
+        <p class="ch-n">LinkedIn Sales Navigator</p>
+        <p class="ch-d">Target Procurement Managers, Fleet Directors, and Plant Managers globally. Send 50 personalized connection requests/day = 1,500/month reach. Best channel for high-value MEGC and industrial orders. Build a conversation first — never pitch on the first message.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-bl b-sm">MEGC</span><span class="badge b-tl b-sm">Industrial</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:92%;"></div></div><p class="itx">Very High</p></div>
+    </div>
+    <div class="ch">
+      <div class="ch-ic">🏛️</div>
+      <div>
+        <p class="ch-n">Trade Shows &amp; Exhibitions</p>
+        <p class="ch-d">ADIPEC (Abu Dhabi), Gastech, CNG/LNG Americas, Africa Oil Week, Hannover Messe. Pre-book meetings via LinkedIn before arriving. Collect 100+ high-intent contacts per event. Every hour standing idle at your booth is paid advertising wasted.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-am b-sm">CNG</span><span class="badge b-tl b-sm">Industrial</span><span class="badge b-bl b-sm">MEGC</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:90%;"></div></div><p class="itx">Very High</p></div>
+    </div>
+    <div class="ch">
+      <div class="ch-ic">🤝</div>
+      <div>
+        <p class="ch-n">Agent &amp; Distributor Network</p>
+        <p class="ch-d">Local agents in India, Nigeria, Brazil, and Pakistan give you instant market penetration. They bring existing buyer trust, local language, and relationships that take years to build independently. The ROI multiplier is unmatched — they sell while you sleep.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-am b-sm">CNG</span><span class="badge b-tl b-sm">Industrial</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:88%;"></div></div><p class="itx">Very High</p></div>
+    </div>
+    <div class="ch">
+      <div class="ch-ic">🛒</div>
+      <div>
+        <p class="ch-n">B2B Marketplaces</p>
+        <p class="ch-d">Alibaba Gold Supplier, TradeIndia, ExportHub, Made-in-China, IndiaMart. Inbound inquiries from buyers who are already searching. Low cost per lead, high volume, and generates leads 24/7 without ongoing effort after initial setup.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-am b-sm">CNG</span><span class="badge b-tl b-sm">Industrial</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:75%;"></div></div><p class="itx">High</p></div>
+    </div>
+    <div class="ch">
+      <div class="ch-ic">📋</div>
+      <div>
+        <p class="ch-n">Government &amp; UN Tender Portals</p>
+        <p class="ch-d">UNGM (United Nations), DG Market (EU), World Bank e-Procurement, national procurement portals. Slow 6–18 month cycle but orders are very large — infrastructure projects often buy hundreds of cylinders per tender. Build your track record now.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-am b-sm">CNG</span><span class="badge b-bl b-sm">MEGC</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:70%;"></div></div><p class="itx">High</p></div>
+    </div>
+    <div class="ch">
+      <div class="ch-ic">✉️</div>
+      <div>
+        <p class="ch-n">Cold Email Sequences</p>
+        <p class="ch-d">5-touch sequences to verified decision-makers found via Apollo.io or Hunter.io. Target 300–500 contacts per campaign. Personalize by country, company size, and product need. Automate follow-ups — most replies come on touches 3–5, not the first email.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-tl b-sm">Industrial</span><span class="badge b-bl b-sm">MEGC</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:65%;"></div></div><p class="itx">Medium-High</p></div>
+    </div>
+    <div class="ch">
+      <div class="ch-ic">🏛️</div>
+      <div>
+        <p class="ch-n">UAE Export Authority (Dubai Exports)</p>
+        <p class="ch-d">Register at dubaiexports.ae for free UAE government support: trade missions, market intelligence reports, subsidized trade show booths, and direct buyer-seller matchmaking events globally. Severely underused by most UAE exporters. This is free money.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-am b-sm">CNG</span><span class="badge b-tl b-sm">Industrial</span><span class="badge b-bl b-sm">MEGC</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:60%;"></div></div><p class="itx">Medium-High</p></div>
+    </div>
+    <div class="ch" style="border:none;">
+      <div class="ch-ic">✍️</div>
+      <div>
+        <p class="ch-n">Content Marketing (LinkedIn + Blog)</p>
+        <p class="ch-d">Technical articles, product safety guides, and industry insights establish EKC as the authority in high-pressure cylinders. Generates consistent inbound leads over time at zero marginal cost. Compound effect — publish once, get leads for years.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;"><span class="badge b-pu b-sm">All Products</span></div>
+      </div>
+      <div class="iw"><p class="ilbl">Impact</p><div class="ibg"><div class="ifl" style="width:50%;"></div></div><p class="itx">Medium</p></div>
+    </div>
+  </div>
+  <div class="tip">
+    <span class="tip-ic">🛠️</span>
+    <div><strong>Recommended Tool Stack (most are free or low-cost):</strong> HubSpot Free (CRM) · Apollo.io (contact finder, $49/mo) · Hunter.io (email verification) · LinkedIn Sales Navigator ($99/mo) · Brevo (email sequences, free tier) · WhatsApp Business (free) · Canva Pro ($15/mo, brochures) · Lusha (buyer intelligence)</div>
+  </div>
+</div>
+
+<!-- ===================== MARKETS ===================== -->
+<div class="sec" id="tab-markets">
+  <p class="slbl">12 priority markets — focus here first</p>
+  <p style="font-size:13px;color:var(--ts);margin-bottom:1.5rem;">Each market has active demand and a limited number of quality non-Chinese suppliers. Enter these before competitors establish deeper roots. Start with the ★★★ markets in Month 3.</p>
+
+  <div class="mst"><span class="badge b-am">CNG Cylinders</span><span style="font-size:13px;color:var(--ts);">South Asia &amp; Latin America — government-mandated CNG adoption creating massive sustained demand</span></div>
+  <div class="mkt-grid" style="margin-bottom:1.5rem;">
+    <div class="mkt"><div class="mkt-fl">🇮🇳</div><p class="mkt-nm">India</p><p class="mkt-ds">World's largest CNG vehicle market. Delhi, Mumbai, Gujarat are driving massive fleet conversions under government mandate. GAIL subsidiaries and state transport corporations are the major buyers.</p><span class="badge b-am b-sm">★★★ Top Priority</span></div>
+    <div class="mkt"><div class="mkt-fl">🇧🇩</div><p class="mkt-nm">Bangladesh</p><p class="mkt-ds">CNG vehicles are the dominant mode in Dhaka. Auto-rickshaw conversion ongoing at scale. Government strongly supports CNG as the urban fuel of choice. High volume, repeat orders.</p><span class="badge b-am b-sm">★★★ Top Priority</span></div>
+    <div class="mkt"><div class="mkt-fl">🇵🇰</div><p class="mkt-nm">Pakistan</p><p class="mkt-ds">One of the world's largest CNG user bases by vehicle count. OGDCL vendors and private CNG station developers are active buyers. Familiar with international cylinder suppliers.</p><span class="badge b-am b-sm">★★★ Top Priority</span></div>
+    <div class="mkt"><div class="mkt-fl">🇧🇷</div><p class="mkt-nm">Brazil</p><p class="mkt-ds">Huge CNG bus fleet in São Paulo and Rio. Petrobras vendor lists and municipal bus operators are primary buyers. Latin America's largest and most sophisticated market.</p><span class="badge b-tl b-sm">★★☆ Strong</span></div>
+  </div>
+
+  <div class="mst"><span class="badge b-tl">Industrial Cylinders</span><span style="font-size:13px;color:var(--ts);">Africa &amp; Middle East — rapidly industrializing with growing industrial gas infrastructure</span></div>
+  <div class="mkt-grid" style="margin-bottom:1.5rem;">
+    <div class="mkt"><div class="mkt-fl">🇳🇬</div><p class="mkt-nm">Nigeria</p><p class="mkt-ds">Largest African economy and growing industrial base. Gas, welding, and medical cylinders in high demand. Linde/BOC Nigeria and NNPC vendor lists are the most efficient entry points.</p><span class="badge b-am b-sm">★★★ Top Priority</span></div>
+    <div class="mkt"><div class="mkt-fl">🇿🇦</div><p class="mkt-nm">South Africa</p><p class="mkt-ds">Africa's most sophisticated industrial market. Mining, medical, and chemical sectors drive demand. Target Air Products SA and Afrox distributor network as your channel partners.</p><span class="badge b-tl b-sm">★★☆ Strong</span></div>
+    <div class="mkt"><div class="mkt-fl">🇸🇦</div><p class="mkt-nm">Saudi Arabia</p><p class="mkt-ds">Massive industrial projects under Vision 2030 (NEOM, Diriyah). Medical gas infrastructure expanding rapidly. Aramco vendor registry is the most valuable prequalification to obtain.</p><span class="badge b-tl b-sm">★★☆ Strong</span></div>
+    <div class="mkt"><div class="mkt-fl">🇰🇪</div><p class="mkt-nm">Kenya</p><p class="mkt-ds">East Africa's logistics and commercial hub. Welding, medical, and light industrial sectors growing fast. BOC Kenya and hospital procurement departments are primary targets.</p><span class="badge b-pu b-sm">★☆☆ Emerging</span></div>
+  </div>
+
+  <div class="mst"><span class="badge b-bl">MEGC</span><span style="font-size:13px;color:var(--ts);">Europe, Americas &amp; Australia — high-value orders from industrial gas majors</span></div>
+  <div class="mkt-grid" style="margin-bottom:1.5rem;">
+    <div class="mkt"><div class="mkt-fl">🇩🇪</div><p class="mkt-nm">Germany</p><p class="mkt-ds">Largest industrial gas market in Europe. Hydrogen mobility infrastructure growing exponentially. Linde AG, Air Liquide DE, and Messer Group are the target enterprise accounts for MEGC.</p><span class="badge b-am b-sm">★★★ Top Priority</span></div>
+    <div class="mkt"><div class="mkt-fl">🇺🇸</div><p class="mkt-nm">USA</p><p class="mkt-ds">Strong MEGC demand from gas distributors and oil &amp; gas sector. Chart Industries customers, Matheson Gas, and Air Products supply chains are the best entry points for a Dubai exporter.</p><span class="badge b-tl b-sm">★★☆ Strong</span></div>
+    <div class="mkt"><div class="mkt-fl">🇦🇺</div><p class="mkt-nm">Australia</p><p class="mkt-ds">LNG and industrial gas sector with strong MEGC demand. Mining industry is a major cylinder user. BOC Australia, Coregas, and Origin Energy vendor lists are the pathway in.</p><span class="badge b-tl b-sm">★★☆ Strong</span></div>
+    <div class="mkt"><div class="mkt-fl">🇳🇱</div><p class="mkt-nm">Netherlands</p><p class="mkt-ds">European logistics hub with major hydrogen and biogas project pipeline. Port of Rotterdam connections. Gasunie and Air Liquide Netherlands are primary MEGC targets for this market.</p><span class="badge b-pu b-sm">★☆☆ Emerging</span></div>
+  </div>
+  <div class="tip">
+    <span class="tip-ic">⚡</span>
+    <div><strong>90-Day Quick Win Strategy:</strong> Launch India (CNG) + Nigeria (Industrial) + Germany (MEGC) simultaneously in Month 3. These three markets can generate your first meaningful pipeline within one quarter. India alone — with the right agent — could justify the entire 6-month investment.</div>
+  </div>
+</div>
+
+<!-- ===================== KPIs ===================== -->
+<div class="sec" id="tab-kpis">
+  <p class="slbl">Monthly performance targets</p>
+  <div class="kg">
+    <div class="kc"><p class="kn">50+</p><p class="kl">New qualified leads / month</p></div>
+    <div class="kc"><p class="kn">25%</p><p class="kl">Email open rate target</p></div>
+    <div class="kc"><p class="kn">30%</p><p class="kl">LinkedIn acceptance rate</p></div>
+    <div class="kc"><p class="kn">10+</p><p class="kl">RFQs received monthly</p></div>
+    <div class="kc"><p class="kn">3–5%</p><p class="kl">Lead-to-quote conversion</p></div>
+    <div class="kc"><p class="kn">100+</p><p class="kl">Trade show contacts each</p></div>
+  </div>
+
+  <p class="slbl">6-Month cumulative targets</p>
+  <div class="card">
+    <div class="pri">
+      <div class="prh"><span class="prl">New qualified leads generated</span><span class="prt">Target: 300</span></div>
+      <div class="pbg"><div class="pfl" style="width:0%;background:#F59E0B;" data-t="100"></div></div>
+    </div>
+    <div class="pri">
+      <div class="prh"><span class="prl">Active agents / distributors signed</span><span class="prt">Target: 6–8</span></div>
+      <div class="pbg"><div class="pfl" style="width:0%;background:#10B981;" data-t="80"></div></div>
+    </div>
+    <div class="pri">
+      <div class="prh"><span class="prl">Proposals / quotes submitted</span><span class="prt">Target: 40–60</span></div>
+      <div class="pbg"><div class="pfl" style="width:0%;background:#3B82F6;" data-t="65"></div></div>
+    </div>
+    <div class="pri">
+      <div class="prh"><span class="prl">Pilot orders / first-time buyers closed</span><span class="prt">Target: 8–12</span></div>
+      <div class="pbg"><div class="pfl" style="width:0%;background:#E879A8;" data-t="40"></div></div>
+    </div>
+    <div class="pri" style="margin-bottom:0;">
+      <div class="prh"><span class="prl">Revenue pipeline value created</span><span class="prt">Target: $2M+</span></div>
+      <div class="pbg"><div class="pfl" style="width:0%;background:#8B5CF6;" data-t="55"></div></div>
+    </div>
+  </div>
+
+  <p class="slbl" style="margin-top:1.5rem;">Weekly execution rhythm — stick to this every week</p>
+  <div class="rg">
+    <div class="rc"><p class="rd">Monday</p><p class="rt">LinkedIn outreach</p><p class="rds">Send 40–50 connection requests. Follow up pending conversations. Post 1 piece of content.</p></div>
+    <div class="rc"><p class="rd">Tuesday</p><p class="rt">LinkedIn nurture</p><p class="rds">Reply to all accepted connections. Move hot conversations to email or call. No pitching yet.</p></div>
+    <div class="rc"><p class="rd">Wednesday</p><p class="rt">Email campaigns</p><p class="rds">Review email stats. Follow up on all opens. Send new batch to cold contact segments.</p></div>
+    <div class="rc"><p class="rd">Thursday</p><p class="rt">Phone &amp; WhatsApp</p><p class="rds">Call 10–15 warm leads. WhatsApp broadcast to Asia, Africa, and Middle East contacts.</p></div>
+    <div class="rc"><p class="rd">Friday</p><p class="rt">Review &amp; plan</p><p class="rds">Update CRM. Qualify pipeline status. Review all week metrics. Plan next week's target list.</p></div>
+  </div>
+  <div class="tip" style="margin-top:1.25rem;">
+    <span class="tip-ic">🎯</span>
+    <div><strong>The #1 metric that predicts success:</strong> Number of qualified new conversations started per week. Everything else — open rates, impressions, clicks — is vanity. If you are starting 15+ real buying conversations per week, consistently, orders will follow. If you are not, something in your targeting or messaging needs to change immediately.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+  <p style="font-size:12px;color:var(--tt);">EKC International FZE &nbsp;·&nbsp; Dubai, UAE &nbsp;·&nbsp; High-Pressure Cylinder Exports &nbsp;·&nbsp; 6-Month Sales Plan 2025</p>
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    Print / Save PDF
+  </button>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// Tab switch
+const TABS=['overview','roadmap','channels','markets','kpis'];
+function sw(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('on'));
+  document.getElementById('tab-'+id).classList.add('on');
+  document.querySelectorAll('.nav-btn')[TABS.indexOf(id)].classList.add('on');
+  if(id==='kpis') setTimeout(animateProg,120);
+  if(id==='channels') setTimeout(()=>{
+    document.querySelectorAll('.ifl').forEach(el=>{
+      const w=el.style.width; el.style.width='0%';
+      setTimeout(()=>{el.style.width=w;},60);
+    });
+  },100);
+}
+
+// Month select
+function selM(i,el){
+  document.querySelectorAll('.tlm').forEach(t=>t.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('.md').forEach(d=>d.classList.remove('on'));
+  document.getElementById('m'+i).classList.add('on');
+}
+
+// Task toggle
+function togT(el){
+  el.classList.toggle('done');
+  const cb=el.querySelector('.ti-cb');
+  cb.classList.toggle('chk');
+  if(cb.classList.contains('chk')) cb.textContent='✓'; else cb.textContent='';
+  updProg();
+}
+
+function updProg(){
+  const total=document.querySelectorAll('.ti').length;
+  const done=document.querySelectorAll('.ti.done').length;
+  const pct=Math.round((done/total)*100);
+  const bar=document.getElementById('pofill');
+  const cnt=document.getElementById('pocnt');
+  if(bar) bar.style.width=pct+'%';
+  if(cnt) cnt.textContent=done+' / '+total;
+}
+
+// Count-up for metric values
+function countUp(el,target,dur){
+  const start=performance.now();
+  const tick=t=>{
+    const p=Math.min((t-start)/dur,1);
+    const e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(e*target)+'+';
+    if(p<1) requestAnimationFrame(tick);
+    else el.textContent=target+'+';
+  };
+  requestAnimationFrame(tick);
+}
+
+function animateProg(){
+  document.querySelectorAll('.pfl[data-t]').forEach(el=>{
+    el.style.width=el.dataset.t+'%';
+  });
+}
+
+// Init
+window.addEventListener('load',()=>{
+  document.querySelectorAll('[data-count]').forEach(el=>
+    countUp(el,parseInt(el.dataset.count),1600)
+  );
+  updProg();
+});
+</script>
+</body>
+</html>
